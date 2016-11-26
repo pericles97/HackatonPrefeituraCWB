@@ -41,10 +41,13 @@
                         </div>
                     </li>
                     <li class="active">
-                        <a href="index.php"><i class="fa fa-th-large"></i> <span class="nav-label">Inicio</span></a>
+                        <a href="index.php"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></a>
                     </li>
                     <li>
-                        <a href="arquivos.php"><i class="fa fa-th-large"></i> <span class="nav-label">Arquivos</span> </a>
+                        <a href="perfil.php"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Perfil</span> </a>
+                    </li>
+                    <li>
+                        <a href="arquivos.php"><i class="fa fa-file-archive-o"></i> <span class="nav-label">Arquivos</span> </a>
                     </li>
                 </ul>
 
@@ -56,7 +59,12 @@
                 <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    </div>
+                        <form role="search" class="navbar-form-custom" method="post" action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Procurar" class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+					</div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
                             <a href="#">
