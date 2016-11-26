@@ -43,24 +43,24 @@
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="search-result">
-                              <h3><a href="http://site.biologiatotal.com.br/" onmousedown="return rwt(this,'','','','8','AFQjCNE5TFzeGc_EUMgs7vf3Vxs8xqJaeQ','rxgTomj2f0aj1CHNxQCakw','0ahUKEwiAoNaytcfQAhUCIZAKHZGdBwUQFghWMAc','','',event)">Biologia Total – ENEM, Vestibulares e Faculdades | Prof. Jubilut</a><a href="https://www.biologiatotal.com.br/areas-da-biologia/" onmousedown="return rwt(this,'','','','7','AFQjCNEa73hYqGa4icwx-EKu3FiJILe2WA','gTkSm2nDMpQhmbiy1BsNMg','0ahUKEwiAoNaytcfQAhUCIZAKHZGdBwUQFghQMAY','','',event)"></a><a href="#"></a></h3>
+                              <h3><a href="arquivos.php" > Biologia Total – ENEM, Vestibulares e Faculdades | Prof. Jubilut</a></h3>
                                 <p>Uma nova experiência de aprendizado. A melhor plataforma de <em>biologia</em> do Brasil. Jubi, quero manjar <em>biologia</em>. Entenda como funciona o <em>Biologia</em> Total ...
                                 </p>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="search-result">
-                                <h3><a href="https://mesalva.com/cursos/biologia" onmousedown="return rwt(this,'','','','10','AFQjCNHIPAXjqGLZySb2h1Zz1UAxfxMPVQ','gXogQFmCie2DePB0sSqlIw','0ahUKEwiAoNaytcfQAhUCIZAKHZGdBwUQFghgMAk','','',event)">Biologia - Me Salva!</a><a href="#"></a></h3>
+                                <h3><a href="arquivos.php" >Biologia - Me Salva!</a></h3>
                                 <p>Extensivo de <em>Biologia</em>. Rogério Fernandes Sophie Maillard von Eye Andressa Helrighel Vivian Bamberg Corassini Elisa Negri. 21 módulos 386 aulas 460 .
                               </p>
                           </div>
                             <div class="hr-line-dashed"></div>
                             <div class="search-result">
-                                <h3><a href="http://www.todabiologia.com/" onmousedown="return rwt(this,'','','','12','AFQjCNFiaR1r21ExMY03p06-v0IfQdTn4w','4CKBof5NzhNLWS6gQ6L2ZQ','0ahUKEwiAoNaytcfQAhUCIZAKHZGdBwUQFghtMAs','','',event)">Toda Biologia - Ciências Biológicas, resumos de Biologia</a><a href="#"></a></h3>
+                                <h3><a href="arquivos.php" >Toda Biologia - Ciências Biológicas, resumos de Biologia</a></h3>
                                 <p><em>Biologia</em>, Anatomia, Citologia, <em>Biologia</em> Celular, Saúde, Zoologia, Botânica, Microbiologia, Genética, Ecologia, Resumos de <em>Biologia</em>.</p>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="search-result">
-                                <h3><a href="https://www.ib.unicamp.br/" onmousedown="return rwt(this,'','','','15','AFQjCNFoWy130CPCXTW6fa6dmzW6UMsd8g','GfB14tK9EsDnFiz_Ra7oJA','0ahUKEwjizqbDtsfQAhUHh5AKHXnMCIs4ChAWCDwwBA','','',event)">Instituto de Biologia | Instituto de Biologia</a><a href="#"></a></h3>
+                                <h3><a href="arquivos.php" >Instituto de Biologia | Instituto de Biologia</a></h3>
                                 <p>Informações sobre cursos de graduação e pós-graduação, projetos e laboratórios de pesquisa. Universidade Estadual de Campinas, SP, Brasil.</p>
                             </div><div class="text-center"><div class="btn-group">
                                     <button class="btn btn-white" type="button"><i class="fa fa-chevron-left"></i></button>
