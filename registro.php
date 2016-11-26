@@ -104,7 +104,7 @@
                     <input type="password" class="form-control" placeholder="Senha" required="">
                 </div>
                 <div>
-                    <textarea name='sobremim'  rows="4" cols="39" id='sobre' placeholder="Fale um pouco sobre você."></textarea>
+                    <textarea name='sobremim'  rows="4" cols="39" id='sobre' maxlength="255" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
                 </div>
                 <div class="form-group">
                         <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Concordar com os termos e a política </label></div>
