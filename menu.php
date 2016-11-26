@@ -33,7 +33,7 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a href="#">Sair</a></li>
+                                <li><a href="login.php">Sair</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -67,7 +67,7 @@
 					</div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <a href="#">
+                            <a href="login.php">
                                 <i class="fa fa-sign-out"></i> Sair
                             </a>
                         </li>

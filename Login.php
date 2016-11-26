@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Login</title>
+    <title>TeachHub</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -18,39 +18,61 @@
 
 <body class="gray-bg">
 
-    <div class="middle-box text-center loginscreen animated fadeInDown">
-        <div>
-            <div>
+	
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
 
-                <h1 class="logo-name">IN+</h1>
+            <div class="col-md-6">
+                <h2 class="font-bold">Bem-vindo ao TeachHub</h2>
 
+                <p>
+                   A nova forma de compartilhar conhecimento.
+
+                 <p> O TeachHub &egrave; uma plataforma educacional voltada ao ganho de aprendizado.</p>
+
+                <p>
+                    O objetivo &egrave; beneficiar docentes e institui&ccedil;&otilde;es ao desenvolvimento e capacita&ccedil;&atilde;o profissional e pessoal, onde os docentes ir&atilde;o compartilhar conte&uacute;dos, planos de aulas e novos modelos de conhecimento.
+                    Reconhecimento profissional, networking e principalmente troca de ideias s&atilde;o os pilares fundamentais da plataforma.
+                </p>               
+                
             </div>
-            <h3>Welcome to IN+</h3>
-            <p>
-                Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
-                <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
-            </p>
-            <p>Login in. To see it in action.</p>
-            <form class="m-t" role="form" action="index.html">
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Username" required="">
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    <form class="m-t" role="form" action="index.php">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="E-mail" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Senha" required="">
+                        </div>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
+                        <a href="#">
+                            <!--<small>Forgot password?</small>-->
+                        </a>
+                        <a href="registro.php">
+                            <small>Professor, n&atilde;o tem uma conta? Fa&ccedil;a j&aacute;!</small>
+                        </a>
+                        <p class="text-muted text-center">
+                            <!--<small>Do not have an account?</small>-->
+                        </p>
+                       <!-- <a class="btn btn-sm btn-white btn-block" href="registro.php">Create an account</a>-->
+                    </form>
+                    <p class="m-t">
+                        <!--<small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small>-->
+                    </p>
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
-
-                <a href="#"><small>Forgot password?</small></a>
-                <p class="text-muted text-center"><small>Do not have an account?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
-            </form>
-            <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+           <!-- <div class="col-md-6">
+                Copyright Example Company
+            </div>-->
+            <div class="col-md-6 text-right">
+                <small>TeachHub 2016</small>
+            </div>
         </div>
     </div>
-
-    <!-- Mainly scripts -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

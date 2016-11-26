@@ -16,6 +16,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="arquivos.php" />
     <Compile Include="css\patterns\1.png" />
     <Compile Include="css\patterns\2.png" />
     <Compile Include="css\patterns\3.png" />
@@ -88,7 +89,9 @@
     <Compile Include="js\jquery-2.1.1.js" />
     <Compile Include="js\jquery-ui-1.10.4.min.js" />
     <Compile Include="js\jquery-ui.custom.min.js" />
+    <Compile Include="login.php" />
     <Compile Include="menu.php" />
+    <Compile Include="perfil.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\patterns" />
