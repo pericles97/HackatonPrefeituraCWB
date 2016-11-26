@@ -33,12 +33,12 @@
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="search-result">
-                                <h3><a href="#">Definição de Biologia</a></h3>
+                                <h3><a href="arquivos.php">Definição de Biologia</a></h3>
                                 <p><em>Biologia</em> (do grego βιος - bios = vida e λογος - logos = estudo, ou seja, o estudo da vida) é a ciência que estuda os seres vivos. Debruça a origem, evolução e o ...</p>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="search-result">
-                                <h3><a href="http://www.sobiologia.com.br/conteudos/Biologia/" onmousedown="return rwt(this,'','','','5','AFQjCNFweidswb-YpEDO9KUJ1Lnvtc8BhA','DHkOl4Vg25R9kCWIlyU07A','0ahUKEwiAoNaytcfQAhUCIZAKHZGdBwUQFgg_MAQ','','',event)">Biologia - Ensino Médio - Conteúdos - Só Biologia</a><a href="#"></a></h3>
+                                <h3><a href="arquivos.php" >Biologia - Ensino Médio - Conteúdos - Só Biologia</a></h3>
                                 <p>Esta seção é dedicada ao ensino de <em>Biologia</em> (conteúdos de ensino médio). Clique sobre o nome do assunto desejado para visualizar o seu conteúdo.</p>
                             </div>
                             <div class="hr-line-dashed"></div>
