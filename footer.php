@@ -3,7 +3,7 @@
         Hackathon <strong>Curitiba</strong> 2016.
     </div>
     <div>
-        <strong>Teacher Hub</strong> Parque S&atilde;o Louren&ccedil;o Company &copy;
+        <strong>TeachHub</strong> Parque S&atilde;o Louren&ccedil;o Company &copy;
     </div>
 </div>
 

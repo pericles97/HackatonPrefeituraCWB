@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <div class="text-center m-t-lg">
                 <h1>
-                    Bem Vindo ao Teacher Hub !
+                    Bem Vindo ao TeachHub !
                 </h1>
                 <small>
                     Portal de compartilhamento de conteudo on-line para aulas.
