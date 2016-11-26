@@ -1,13 +1,18 @@
-<?php
-$valor1 = 12;
-$valor2 = 13;
-$valor3 = $valor1 + $valor2;
+<?php include('menu.php');?>
 
-?>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-center m-t-lg">
+                <h1>
+                    Bem Vindo ao Teacher Hub !
+                </h1>
+                <small>
+                    Portal de compartilhamento de conteudo on-line para aulas.
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
 
-<html>
-<b>Hello World</b>
-<h1>Teste3</h1>
-<h1>Partiu Aprender Galera</h1>
-<h1> <?= $valor3?> </h1>
-</html>
+<?php include('footer.php');?>
