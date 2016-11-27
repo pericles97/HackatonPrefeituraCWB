@@ -92,6 +92,9 @@
     <Compile Include="login.php" />
     <Compile Include="menu.php" />
     <Compile Include="perfil.php" />
+    <Compile Include="registro.php" />
+    <Compile Include="resultadosPesquisa.php" />
+    <Compile Include="_conexao.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\patterns" />
@@ -108,5 +111,19 @@
     <Folder Include="js\plugins\slimscroll" />
     <Folder Include="js\plugins" />
     <Folder Include="js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\a1.jpg" />
+    <Content Include="img\a2.jpg" />
+    <Content Include="img\a3.jpg" />
+    <Content Include="img\a4.jpg" />
+    <Content Include="img\a6.jpg" />
+    <Content Include="img\a7.jpg" />
+    <Content Include="img\a8.jpg" />
+    <Content Include="img\p1.jpg" />
+    <Content Include="img\p3.jpg" />
+    <Content Include="img\profile.jpg" />
+    <Content Include="img\profile_big.jpg" />
+    <Content Include="img\teach_hub_logo cortada.png" />
   </ItemGroup>
 </Project>

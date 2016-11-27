@@ -1,3 +1,33 @@
+<?php
+	session_start();
+	require_once '_conexao.php';
+	if (empty($_SESSION ['$email']))
+	{
+		if(!empty($_POST))
+		{
+			// Filtros
+			$email = strtolower(trim(str_replace('%40','@',$_POST ['email'])));
+			$senha = trim($_POST ['senha']);
+
+			$usuario = $db -> query ("SELECT * FROM [dbo].[PROFESSOR] WHERE Email = '$email' AND Senha = '$senha'") -> fetch();
+
+			if(!empty($usuario))
+			{
+				$_SESSION ['$email'] = $email;
+				header('location: ../index.php');
+			}
+			else
+			{
+				echo '<script type="text/javascript">','alert(\'Usuario ou senha incorretos.\');','</script>';
+			}
+		}
+	}
+	else
+	{
+		header('location: ../index.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +48,7 @@
 
 <body class="gray-bg">
 
-	
+
     <div class="loginColumns animated fadeInDown">
         <div class="row">
 
@@ -33,17 +63,17 @@
                 <p>
                     O objetivo &egrave; beneficiar docentes e institui&ccedil;&otilde;es ao desenvolvimento e capacita&ccedil;&atilde;o profissional e pessoal, onde os docentes ir&atilde;o compartilhar conte&uacute;dos, planos de aulas e novos modelos de conhecimento.
                     Reconhecimento profissional, networking e principalmente troca de ideias s&atilde;o os pilares fundamentais da plataforma.
-                </p>               
-                
+                </p>
+
             </div>
             <div class="col-md-6">
                 <div class="ibox-content">
-                    <form class="m-t" role="form" action="index.php">
+                    <form class="m-t" role="form" action="login.php" method="post">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="E-mail" required="">
+							<input type="email" class="form-control" placeholder="E-mail" required="" id="email" />
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Senha" required="">
+                            <input type="password" class="form-control" placeholder="Senha" required="" id="senha">
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
                         <a href="#">
@@ -73,7 +103,5 @@
             </div>
         </div>
     </div>
-
 </body>
-
 </html>
