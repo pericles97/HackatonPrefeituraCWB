@@ -27,7 +27,7 @@
             </div>
             <h3>Registrar no TeatchHub+</h3>
             <p>Crie uma conta para vê-la em ação.</p>
-            <form class="m-t" role="form" action="login.html">
+            <form class="m-t" role="form" action="login.php">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Nome" required="">
                 </div>
@@ -76,7 +76,7 @@
                     <input type="text" class="form-control" placeholder="Cidade" required="">
                 </div>
                 <div class="form-group">
-                    <input type="tel" class="form-control" placeholder="Telefone" required="" pattern="[0-9]{10}">
+                    <input type="text" class="form-control" placeholder="Telefone" required="">
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="Email" required="">
