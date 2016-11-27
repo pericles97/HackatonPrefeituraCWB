@@ -9,7 +9,7 @@ if(!empty($_POST)){
     $Estado = strtoupper(trim($_POST['Estado']));
     $Cidade = strtoupper(trim($_POST['Cidade']));
     $Telefone = strtoupper(trim($_POST['Telefone']));
-    $Email = strtolower(trim(str_replace('%40','@',$_POST ['txtEmail'])));
+    $Email = strtolower(trim(str_replace('%40','@',$_POST ['Email'])));
     $AreaAtuacao = strtoupper(trim($_POST['AreaAtuacao']));
     $Nivel = strtoupper(trim($_POST['Nivel']));
     $Senha = trim($_POST['Senha']);
@@ -24,7 +24,7 @@ if(!empty($_POST)){
         $Complemento = "";
         $Estado = "";
         $Cidade = "";
-        $Telefone = "";
+        $Cidade = "";
         $Email = "";
         $AreaAtuacao = "";
         $Nivel = "";
