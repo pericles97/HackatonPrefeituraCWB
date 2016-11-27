@@ -51,9 +51,6 @@
 
     <div class="loginColumns animated fadeInDown">
 
-        <div class="text-center">
-            <img alt="image" class="img-circle" src="logo.jpg"/>
-        </div>
 
         <div class="row">
 
