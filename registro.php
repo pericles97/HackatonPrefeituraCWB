@@ -1,19 +1,33 @@
 <?php
 
-if(!empty($_POST)){
-    $Nome = strtoupper(trim($_POST['Nome']));
-    $Sobrenome = strtoupper(trim($_POST['Sobrenome']));
-    $Endereco = strtoupper(trim($_POST['Endereco']));
-    $Numero = strtoupper(trim($_POST['Numero']));
-    $Complemento = strtoupper(trim($_POST['Complemento']));
-    $Estado = strtoupper(trim($_POST['Estado']));
-    $Cidade = strtoupper(trim($_POST['Cidade']));
-    $Telefone = strtoupper(trim($_POST['Telefone']));
-    $Email = strtolower(trim(str_replace('%40','@',$_POST ['txtEmail'])));
-    $AreaAtuacao = strtoupper(trim($_POST['AreaAtuacao']));
-    $Nivel = strtoupper(trim($_POST['Nivel']));
-    $Senha = trim($_POST['Senha']);
-    $SobreMim = strtoupper(trim($_POST['SobreMim']));
+if(empty($_POST)){
+    $Nome = "";
+    $Sobrenome = "";
+    $Endereco = "";
+    $Numero = "";
+    $Complemento = "";
+    $Estado = "";
+    $Cidade = "";
+    $Telefone = "";
+    $Email = "";
+    $AreaAtuacao = "";
+    $Nivel = "";
+    $Senha = "";
+    $SobreMim = "";
+    }else{
+        $Nome = strtoupper(trim($_POST['Nome']));
+        $Sobrenome = strtoupper(trim($_POST['Sobrenome']));
+        $Endereco = strtoupper(trim($_POST['Endereco']));
+        $Numero = strtoupper(trim($_POST['Numero']));
+        $Complemento = strtoupper(trim($_POST['Complemento']));
+        $Estado = strtoupper(trim($_POST['Estado']));
+        $Cidade = strtoupper(trim($_POST['Cidade']));
+        $Telefone = strtoupper(trim($_POST['Telefone']));
+        $Email = strtolower(trim(str_replace('%40','@',$_POST ['txtEmail'])));
+        $AreaAtuacao = strtoupper(trim($_POST['AreaAtuacao']));
+        $Nivel = strtoupper(trim($_POST['Nivel']));
+        $Senha = trim($_POST['Senha']);
+        $SobreMim = strtoupper(trim($_POST['SobreMim']));
     }
 $erros = [];
 
