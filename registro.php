@@ -35,12 +35,12 @@ if(!empty($_POST)){
 $erros = [];
 
 
-if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) && !empty($Estado) && !empty($Cidade) && !empty ($Telefone) && !empty ($Email) && !empty ($AreaAtuacao) && !empty ($Nivel) && !empty ($Senha) && !empty ($SobreMim)){
+if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) && !empty($Estado) && !empty($Cidade) && !empty ($Telefone) && !empty ($Email) && !empty ($AreaAtuacao) && !empty ($Nivel) && !empty ($Senha) && !empty ($FaleUmPoucoSobreVoce)){
     require_once '_conexao.php';
     
-    $duplicado = $db -> query ("select Email from professor where Email = '$email'") -> fetch();
+    $duplicado = $db -> query ("select Email from professor where Email = '$Email'") -> fetch();
     
-    if ($duplicado['email'] == $email)
+    if ($duplicado['Email'] == $Email)
     {
         $erros [] = 'E-mail já cadastrado';
     }
