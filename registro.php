@@ -13,7 +13,7 @@ if(!empty($_POST)){
     $AreaAtuacao = strtoupper(trim($_POST['AreaAtuacao']));
     $Nivel = strtoupper(trim($_POST['Nivel']));
     $Senha = trim($_POST['Senha']);
-    $SobreMim = strtoupper(trim($_POST['SobreMim']));
+    $FaleUmPoucoSobreVoce = strtoupper(trim($_POST['SobreMim']));
 
     }else{
         
@@ -29,7 +29,7 @@ if(!empty($_POST)){
         $AreaAtuacao = "";
         $Nivel = "";
         $Senha = "";
-        $SobreMim = "";    
+        $FaleUmPoucoSobreVoce = "";    
     }
 $erros = [];
 
@@ -46,9 +46,9 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
     else
     {
         $db -> exec ("insert into professor
-												(Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,SobreMim)
+												(Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,FaleUmPoucoSobreVoce)
 												values
-												('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$Estado','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$SobreMim')");
+												('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$Estado','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$FaleUmPoucoSobreVoce')");
         
         header('location: login.php');
     }
@@ -180,7 +180,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
                     <input type="password" class="form-control" placeholder="Senha" required="" name="Senha">
                 </div>
                 <div>
-                    <textarea name='Sobremim'  rows="4" cols="39" id='sobre' maxlength="255" value="<?=$SobreMim?>" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
+                    <textarea name='FaleUmPoucoSobreVoce'  rows="4" cols="39" id='sobre' maxlength="255" value="<?=$SobreMim?>" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
                 </div>
                 <div class="form-group">
                         <div class="checkbox i-checks"><label> <input required="" type="checkbox"><i></i> Concordar com os termos e a política </label></div>
