@@ -47,7 +47,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
     {
         $db -> exec ("insert into professor (Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,FaleUmPoucoSobreVoce)
 		values
-		('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$E','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$FaleUmPoucoSobreVoce')");
+		('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$Estado','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$FaleUmPoucoSobreVoce')");
         
         header('location: login.php');
     }
@@ -87,7 +87,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
             </div>
             <h3>Registrar no TeatchHub+</h3>
             <p>Crie uma conta para vê-la em ação.</p>
-            <form class="m-t" role="form" action="login.php" method="post">
+            <form class="m-t" role="form" method="post">
                 <!= Impressão de erros =>
                 <ul style='color: #F00'>
                     <?php foreach($erros as $erro): ?>
@@ -184,7 +184,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
                 <div class="form-group">
                         <div class="checkbox i-checks"><label> <input required="" type="checkbox"><i></i> Concordar com os termos e a política </label></div>
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>
+                <button type="submit">Registrar</button>
 
                 <p class="text-muted text-center"><small>já tem uma conta?</small></p>
                 <a class="btn btn-sm btn-white btn-block" href="login.php">Login</a>
