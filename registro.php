@@ -104,7 +104,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
                     <input type="text" class="form-control" placeholder="Sobrenome" required="" maxlength="50" name="Sobrenome" value="<?=$Sobrenome?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" name="Endereco" value="<?=$endereco?>">
+                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" name="Endereco" value="<?=$Endereco?>">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Numero" required=""  maxlength="10" name="Numero" value="<?=$Numero?>">
