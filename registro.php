@@ -11,20 +11,6 @@ $Nivel = null;
 $Senha = null;
 $FaleUmPoucoSobreVoce = null;
 
-/* Tipos de variaveis e tamnhos
- <Nome, varchar(40),>
-,<Sobrenome, varchar(50),>
-,<Endereco, varchar(50),>
-,<Estado, varchar(2),>
-,<Cidade, varchar(40),>
-,<Telefone, varchar(20),>
-,<Email, varchar(80),>
-,<AreaAtuacao, varchar(40),>
-,<Nivel, varchar(20),>
-,<Senha, varchar(20),>
-,<FaleUmPoucoSobreVoce, varchar(255)
- */
-
 ?>
 
 
