@@ -48,13 +48,20 @@
 
 <body class="gray-bg">
 
+   
 
     <div class="loginColumns animated fadeInDown">
 
 
         <div class="row">
+            <div>
 
+                <img alt="image" class="img-circle" src="img/logo02.png" height="50" width="50"/> 
+            
+            </div>
             <div class="col-md-6">
+                
+                
                 <h2 class="font-bold">Bem-vindo ao TeachHub</h2>
 
                 <p>
