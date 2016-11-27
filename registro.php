@@ -13,7 +13,7 @@ if(!empty($_POST)){
     $AreaAtuacao = strtoupper(trim($_POST['AreaAtuacao']));
     $Nivel = strtoupper(trim($_POST['Nivel']));
     $Senha = trim($_POST['Senha']);
-    $FaleUmPoucoSobreVoce = strtoupper(trim($_POST['SobreMim']));
+    $FaleUmPoucoSobreVoce = strtoupper(trim($_POST['FaleUmPoucoSobreVoce']));
 
     }else{
         
