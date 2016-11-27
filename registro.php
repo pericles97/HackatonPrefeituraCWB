@@ -1,15 +1,43 @@
 <?php
-$Nome = null;
-$Sobrenome = null;
-$Endereco = null;
-$Estado = null;
-$Cidade = null;
-$Telefone = null;
-$Email = null;
-$AreaAtuacao = null;
-$Nivel = null;
-$Senha = null;
-$FaleUmPoucoSobreVoce = null;
+$Nome = strtoupper(trim(['Nome']));
+$Sobrenome = strtoupper(trim(['Sobrenome']));
+$Endereco = strtoupper(trim(['Endereco']));
+$Numero = strtoupper(trim(['Numero']));
+$Complemento = strtoupper(trim(['Complemento']));
+$Estado = strtoupper(trim(['Estado']));
+$Cidade = strtoupper(trim(['Cidade']));
+$Telefone = strtoupper(trim(['Telefone']));
+$Email = strtolower(trim(str_replace('%40','@',$_POST ['txtEmail'])))
+$AreaAtuacao = strtoupper(trim(['AreaAtuacao']));
+$Nivel = strtoupper(trim(['Nivel']));
+$Senha = trim(['Senha']);
+$SobreMim = strtoupper(trim(['SobreMim']));
+$erros = [];
+
+
+if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) && !empty($Estado) && !empty($Cidade) && !empty ($Telefone) && !empty ($Email) && !empty ($AreaAtuacao) && !empty ($Nivel) && !empty ($Senha) && !empty ($SobreMim)){
+    require_once '_conexao.php';
+    
+    $duplicado = $db -> query ("select Email from professor where Email = '$email'") -> fetch();
+    
+    if ($duplicado['email'] == $email)
+    {
+        $erros [] = 'E-mail já cadastrado';
+    }
+    else
+    {
+        $db -> exec ("insert into eleitor
+												(email,nome,senha,data_nascimento,id_bairro)
+												values
+												('$email','$nome', '$senha','$data_nascimento','$id_bairro')");
+        
+        $_SESSION ['$email'] = $email;
+        
+        header('location: index.php');
+    }
+    
+}
+
 
 ?>
 
@@ -43,26 +71,26 @@ $FaleUmPoucoSobreVoce = null;
             </div>
             <h3>Registrar no TeatchHub+</h3>
             <p>Crie uma conta para vê-la em ação.</p>
-            <form class="m-t" role="form" action="login.php">
+            <form class="m-t" role="form" action="login.php" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nome" required="" maxlength="40" id="txtNome">
+                    <input type="text" class="form-control" placeholder="Nome" required="" maxlength="40" name="Nome" value="$Nome">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sobrenome" required="" maxlength="50" id="txtSobrenome">
+                    <input type="text" class="form-control" placeholder="Sobrenome" required="" maxlength="50" name="Sobrenome" value="$Sobrenome">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" id="txtEndereco">
+                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" name="Endereco" value="$endereco">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Numero" required=""  maxlength="10" id= "txtNumero">
+                    <input type="text" class="form-control" placeholder="Numero" required=""  maxlength="10" name="Numero" value="$Numero">
                 </div>
 
                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Complemento" maxlength="30" id="txtComplemento">
+                    <input type="text" class="form-control" placeholder="Complemento" maxlength="30" name="Complemento" value="$Complemento">
                 </div>
 
                 <div class="form-group">
-                <select name="uf" input type="" class="form-control" required="" id="txtEstado">
+                <select name="Estado" input type="" class="form-control" required="">
                         <option value = "AC" >AC</option>
                         <option value = "AL" >AL</option>
                         <option value = "AP" >AP</option>
@@ -93,16 +121,16 @@ $FaleUmPoucoSobreVoce = null;
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Cidade" required="" id="txtCidade">
+                    <input type="text" class="form-control" placeholder="Cidade" required="" name="Cidade" value="$Cidade">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Telefone" required="" id="txtTelefone">
+                    <input type="text" class="form-control" placeholder="Telefone" required="" name="Telefone" value="$Telefone">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" required="" id="txtEmail">
+                    <input type="email" class="form-control" placeholder="Email" required="" name="Email" value="$Email">
                 </div>
                 <div class="form-group">
-                <select name="atuacao" input type="" class="form-control" required="" id="txtAreaAtuação">
+                <select name="AreaAtuacao" input type="" class="form-control" required="">
                     <option value="Atuação">Area de atuação</option>
                     <option value="portugues">Portugues</option>
                     <option value="biologia">Biologia</option>
@@ -112,7 +140,7 @@ $FaleUmPoucoSobreVoce = null;
                 </div>
                 </div>
                 <div class="form-group">
-                <select name="nivel" input type="" class="form-control" required="" id = "txtNivel">
+                <select name="Nivel" input type="" class="form-control" required="">
                     <option value="nivel">Nível</option>
                     <option value="fundamental">Fundamental</option>
                     <option value="medio">Médio</option>
@@ -124,10 +152,10 @@ $FaleUmPoucoSobreVoce = null;
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Senha" required="" id="txtsenha">
+                    <input type="password" class="form-control" placeholder="Senha" required="" name="Senha">
                 </div>
                 <div>
-                    <textarea name='sobremim'  rows="4" cols="39" id='sobre' maxlength="255" id="txtSobreMim" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
+                    <textarea name='Sobremim'  rows="4" cols="39" id='sobre' maxlength="255" value="$SobreMim" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
                 </div>
                 <div class="form-group">
                         <div class="checkbox i-checks"><label> <input required="" type="checkbox"><i></i> Concordar com os termos e a política </label></div>
