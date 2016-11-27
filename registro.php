@@ -2,7 +2,7 @@
 
 $Nome = strtoupper(trim($_POST['Nome']));
 $Sobrenome = strtoupper(trim($_POST['Sobrenome']));
-$Endereco = strtoupper(trim([$_POST'Endereco']));
+$Endereco = strtoupper(trim($_POST['Endereco']));
 $Numero = strtoupper(trim($_POST['Numero']));
 $Complemento = strtoupper(trim($_POST['Complemento']));
 $Estado = strtoupper(trim($_POST['Estado']));
