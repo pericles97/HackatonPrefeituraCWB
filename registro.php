@@ -1,3 +1,33 @@
+<?php
+$Nome = null;
+$Sobrenome = null;
+$Endereco = null;
+$Estado = null;
+$Cidade = null;
+$Telefone = null;
+$Email = null;
+$AreaAtuacao = null;
+$Nivel = null;
+$Senha = null;
+$FaleUmPoucoSobreVoce = null;
+
+/* Tipos de variaveis e tamnhos
+ <Nome, varchar(40),>
+,<Sobrenome, varchar(50),>
+,<Endereco, varchar(50),>
+,<Estado, varchar(2),>
+,<Cidade, varchar(40),>
+,<Telefone, varchar(20),>
+,<Email, varchar(80),>
+,<AreaAtuacao, varchar(40),>
+,<Nivel, varchar(20),>
+,<Senha, varchar(20),>
+,<FaleUmPoucoSobreVoce, varchar(255)
+ * /
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -29,16 +59,16 @@
             <p>Crie uma conta para vê-la em ação.</p>
             <form class="m-t" role="form" action="login.php">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nome" required="">
+                    <input type="text" class="form-control" placeholder="Nome" required="" maxlength="40" id="txtNome">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sobrenome" required="">
+                    <input type="text" class="form-control" placeholder="Sobrenome" required="" maxlength="50" id="txtSobrenome">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Endereço" required="">
+                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" id="txtEndereco">
                 </div>
                 <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Número" required="">
+                    <input type="number" class="form-control" placeholder="Numero" required="">
                 </div>
 
                 <div class="form-group">
