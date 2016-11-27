@@ -1,5 +1,14 @@
 <?php include('menu.php');?>
 
+<?php
+//session_start();
+if (!empty($_GET['sair']) && $_GET['sair'] == true)
+{
+	$_SESSION ['$email'] = null;
+	header('location: ../login.php');
+}
+?>
+
 <div class="wrapper wrapper-content animated fadeInRight">
 	<div class="row">
         <div class="col-lg-12">

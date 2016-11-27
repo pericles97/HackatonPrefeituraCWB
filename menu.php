@@ -1,3 +1,29 @@
+<?php
+session_start();
+require_once '_conexao.php';
+if (!empty($_SESSION ['$email']))
+{
+	// Filtros
+	$email = $_SESSION ['$email'];
+	$usuario = $db -> query ("SELECT * FROM [dbo].[PROFESSOR] WHERE Email = '$email'") -> fetch();
+
+	if(!empty($usuario))
+	{
+		$nome = $usuario['Nome'];
+		$areaAtuacao = $usuario['AreaAtuacao'];
+	}
+	else
+	{
+		echo '<script type="text/javascript">','alert(\'Ocorreu um erro, usuario não encontrado.\');','</script>';
+		header('location: ../login.php');
+	}	
+}
+else
+{
+	header('location: ../login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -28,12 +54,12 @@
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                     <span class="block m-t-xs">
-                                        <strong class="font-bold">Matias de Abreu</strong>
-                                    </span> <span class="text-muted text-xs block">Professor de Matematica<b class="caret"></b></span>
+                                        <strong class="font-bold"><?=$nome ?></strong>
+                                    </span> <span class="text-muted text-xs block"><?=$areaAtuacao ?><b class="caret"></b></span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a href="login.php">Sair</a></li>
+                                <li><a href="index.php?sair=true">Sair</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -67,7 +93,7 @@
 					</div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <a href="login.php">
+                            <a href="index.php?sair=true">
                                 <i class="fa fa-sign-out"></i> Sair
                             </a>
                         </li>

@@ -70,10 +70,10 @@
                 <div class="ibox-content">
                     <form class="m-t" method="post">
                         <div class="form-group">
-							<input type="email" class="form-control" placeholder="E-mail" required="" id="email" />
+							<input type="email" class="form-control" placeholder="E-mail" required="" name="email" />
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Senha" required="" id="senha">
+							<input type="password" class="form-control" placeholder="Senha" required="" name="senha" />
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
                         <a href="#">
