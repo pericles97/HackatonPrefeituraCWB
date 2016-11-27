@@ -3,7 +3,7 @@
 	$driver = 'sqlsrv';
 	$host = 'hackathoncwb.database.windows.net';
 	$dbname = 'hackathoncwb';
-	$user = 'eduguedes';
+	$user = 'app';
 	$password = '!1cderfv';
 
 

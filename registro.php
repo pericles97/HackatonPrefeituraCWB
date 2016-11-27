@@ -1,3 +1,63 @@
+<?php
+
+if(!empty($_POST)){
+    $Nome = strtoupper(trim($_POST['Nome']));
+    $Sobrenome = strtoupper(trim($_POST['Sobrenome']));
+    $Endereco = strtoupper(trim($_POST['Endereco']));
+    $Numero = strtoupper(trim($_POST['Numero']));
+    $Complemento = strtoupper(trim($_POST['Complemento']));
+    $Estado = strtoupper(trim($_POST['Estado']));
+    $Cidade = strtoupper(trim($_POST['Cidade']));
+    $Telefone = strtoupper(trim($_POST['Telefone']));
+    $Email = strtolower(trim(str_replace('%40','@',$_POST ['txtEmail'])));
+    $AreaAtuacao = strtoupper(trim($_POST['AreaAtuacao']));
+    $Nivel = strtoupper(trim($_POST['Nivel']));
+    $Senha = trim($_POST['Senha']);
+    $FaleUmPoucoSobreVoce = strtoupper(trim($_POST['FaleUmPoucoSobreVoce']));
+
+    }else{
+        
+        $Nome = "";
+        $Sobrenome = "";
+        $Endereco = "";
+        $Numero = "";
+        $Complemento = "";
+        $Estado = "";
+        $Cidade = "";
+        $Telefone = "";
+        $Email = "";
+        $AreaAtuacao = "";
+        $Nivel = "";
+        $Senha = "";
+        $FaleUmPoucoSobreVoce = "";    
+    }
+$erros = [];
+
+
+if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) && !empty($Estado) && !empty($Cidade) && !empty ($Telefone) && !empty ($Email) && !empty ($AreaAtuacao) && !empty ($Nivel) && !empty ($Senha) && !empty ($SobreMim)){
+    require_once '_conexao.php';
+    
+    $duplicado = $db -> query ("select Email from professor where Email = '$email'") -> fetch();
+    
+    if ($duplicado['email'] == $email)
+    {
+        $erros [] = 'E-mail já cadastrado';
+    }
+    else
+    {
+        $db -> exec ("insert into professor (Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,FaleUmPoucoSobreVoce)
+		values
+		('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$E','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$FaleUmPoucoSobreVoce')");
+        
+        header('location: login.php');
+    }
+    
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +76,7 @@
 
 </head>
 
-<body class="gray-bg">
+<body class="gray-bg"> 
 
     <div class="middle-box text-center loginscreen   animated fadeInDown">
         <div>
@@ -27,22 +87,34 @@
             </div>
             <h3>Registrar no TeatchHub+</h3>
             <p>Crie uma conta para vê-la em ação.</p>
-            <form class="m-t" role="form" action="login.php">
+            <form class="m-t" role="form" action="login.php" method="post">
+                <!= Impressão de erros =>
+                <ul style='color: #F00'>
+                    <?php foreach($erros as $erro): ?>
+                    <li><?=$erro?></li>
+                    <?php endforeach; ?>
+                </ul>
+
+
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nome" required="">
+                    <input type="text" class="form-control" placeholder="Nome" required="" maxlength="40" name="Nome" value="<?=$Nome?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sobrenome" required="">
+                    <input type="text" class="form-control" placeholder="Sobrenome" required="" maxlength="50" name="Sobrenome" value="<?=$Sobrenome?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Endereço" required="">
+                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" name="Endereco" value="<?=$Endereco?>">
                 </div>
                 <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Número" required="">
+                    <input type="text" class="form-control" placeholder="Numero" required=""  maxlength="10" name="Numero" value="<?=$Numero?>">
+                </div>
+
+                 <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Complemento" maxlength="30" name="Complemento" value="<?=$Complemento?>">
                 </div>
 
                 <div class="form-group">
-                <select name="uf" input type="" class="form-control" required="">
+                <select name="Estado" input type="" class="form-control" required="">
                         <option value = "AC" >AC</option>
                         <option value = "AL" >AL</option>
                         <option value = "AP" >AP</option>
@@ -73,16 +145,16 @@
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Cidade" required="">
+                    <input type="text" class="form-control" placeholder="Cidade" required="" name="Cidade" value="<?=$Cidade?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Telefone" required="">
+                    <input type="text" class="form-control" placeholder="Telefone" required="" name="Telefone" value="<?=$Telefone?>">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" required="">
+                    <input type="email" class="form-control" placeholder="Email" required="" name="Email" value="<?=$Email?>">
                 </div>
                 <div class="form-group">
-                <select name="atuacao" input type="" class="form-control" required="">
+                <select name="AreaAtuacao" input type="" class="form-control" required="">
                     <option value="Atuação">Area de atuação</option>
                     <option value="portugues">Portugues</option>
                     <option value="biologia">Biologia</option>
@@ -90,9 +162,9 @@
                     <option value="quimica">Quimica</option>
                 </select>
                 </div>
-                </div>
+               
                 <div class="form-group">
-                <select name="nivel" input type="" class="form-control" required="">
+                <select name="Nivel" input type="" class="form-control" required="">
                     <option value="nivel">Nível</option>
                     <option value="fundamental">Fundamental</option>
                     <option value="medio">Médio</option>
@@ -104,13 +176,13 @@
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Senha" required="">
+                    <input type="password" class="form-control" placeholder="Senha" required="" name="Senha">
                 </div>
                 <div>
-                    <textarea name='sobremim'  rows="4" cols="39" id='sobre' maxlength="255" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
+                    <textarea name='FaleUmPoucoSobreVoce'  rows="4" cols="39" id='sobre' maxlength="255" value="<?=$SobreMim?>" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
                 </div>
                 <div class="form-group">
-                        <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Concordar com os termos e a política </label></div>
+                        <div class="checkbox i-checks"><label> <input required="" type="checkbox"><i></i> Concordar com os termos e a política </label></div>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>
 
