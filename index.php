@@ -21,7 +21,7 @@ if (!empty($_GET['sair']) && $_GET['sair'] == true)
                 </small>
 			</div>
 			<div class="text-center m-t-lg">
-				<img alt="image" class="img-circle" src="img/teach_hub_logo cortada.png" />
+				<img alt="image" class="img-circle" src="img/logo02.png" />
 			</div>
 		</div>
 	</div>
