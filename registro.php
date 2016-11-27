@@ -60,7 +60,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
 
 </head>
 
-<body class="gray-bg">
+<body class="gray-bg"> </body>
 
     <div class="middle-box text-center loginscreen   animated fadeInDown">
         <div>
@@ -73,20 +73,20 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
             <p>Crie uma conta para vê-la em ação.</p>
             <form class="m-t" role="form" action="login.php" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nome" required="" maxlength="40" name="Nome" value="$Nome">
+                    <input type="text" class="form-control" placeholder="Nome" required="" maxlength="40" name="Nome" value="<?=$Nome>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sobrenome" required="" maxlength="50" name="Sobrenome" value="$Sobrenome">
+                    <input type="text" class="form-control" placeholder="Sobrenome" required="" maxlength="50" name="Sobrenome" value="<?=$Sobrenome>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" name="Endereco" value="$endereco">
+                    <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" name="Endereco" value="<?=$endereco>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Numero" required=""  maxlength="10" name="Numero" value="$Numero">
+                    <input type="text" class="form-control" placeholder="Numero" required=""  maxlength="10" name="Numero" value="<?=$Numero>">
                 </div>
 
                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Complemento" maxlength="30" name="Complemento" value="$Complemento">
+                    <input type="text" class="form-control" placeholder="Complemento" maxlength="30" name="Complemento" value="<?=$Complemento>">
                 </div>
 
                 <div class="form-group">
@@ -121,13 +121,13 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Cidade" required="" name="Cidade" value="$Cidade">
+                    <input type="text" class="form-control" placeholder="Cidade" required="" name="Cidade" value="<?=$Cidade>">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Telefone" required="" name="Telefone" value="$Telefone">
+                    <input type="text" class="form-control" placeholder="Telefone" required="" name="Telefone" value="<?=$Telefone>">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" required="" name="Email" value="$Email">
+                    <input type="email" class="form-control" placeholder="Email" required="" name="Email" value="<?=$Email>">
                 </div>
                 <div class="form-group">
                 <select name="AreaAtuacao" input type="" class="form-control" required="">
@@ -155,7 +155,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
                     <input type="password" class="form-control" placeholder="Senha" required="" name="Senha">
                 </div>
                 <div>
-                    <textarea name='Sobremim'  rows="4" cols="39" id='sobre' maxlength="255" value="$SobreMim" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
+                    <textarea name='Sobremim'  rows="4" cols="39" id='sobre' maxlength="255" value="<?=$SobreMim>" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
                 </div>
                 <div class="form-group">
                         <div class="checkbox i-checks"><label> <input required="" type="checkbox"><i></i> Concordar com os termos e a política </label></div>
