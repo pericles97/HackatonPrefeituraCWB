@@ -32,9 +32,6 @@
                     <input type="text" class="form-control" placeholder="Nome" required="">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sobrenome" required="">
-                </div>
-                <div class="form-group">
                     <input type="text" class="form-control" placeholder="Endereço" required="">
                 </div>
                 <div class="form-group">
