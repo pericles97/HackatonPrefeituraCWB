@@ -58,24 +58,24 @@
                 <h2 class="font-bold">Bem-vindo ao TeachHub</h2>
 
                 <p>
-                   A nova forma de compartilhar conhecimento.
+                    A nova forma de compartilhar conhecimento.
 
-                 <p> O TeachHub &egrave; uma plataforma educacional voltada ao ganho de aprendizado.</p>
+                    <p>O TeachHub &egrave; uma plataforma educacional voltada ao ganho de aprendizado.</p>
 
-                <p>
-                    O objetivo &egrave; beneficiar docentes e institui&ccedil;&otilde;es ao desenvolvimento e capacita&ccedil;&atilde;o profissional e pessoal, onde os docentes ir&atilde;o compartilhar conte&uacute;dos, planos de aulas e novos modelos de conhecimento.
+                    <p>
+                        O objetivo &egrave; beneficiar docentes e institui&ccedil;&otilde;es ao desenvolvimento e capacita&ccedil;&atilde;o profissional e pessoal, onde os docentes ir&atilde;o compartilhar conte&uacute;dos, planos de aulas e novos modelos de conhecimento.
                     Reconhecimento profissional, networking e principalmente troca de ideias s&atilde;o os pilares fundamentais da plataforma.
-                </p>
+                    </p>
 
             </div>
             <div class="col-md-6">
                 <div class="ibox-content">
                     <form class="m-t" method="post">
                         <div class="form-group">
-							<input type="email" class="form-control" placeholder="E-mail" required="" name="email" />
+                            <input type="email" class="form-control" placeholder="E-mail" required="" name="email" />
                         </div>
                         <div class="form-group">
-							<input type="password" class="form-control" placeholder="Senha" required="" name="senha" />
+                            <input type="password" class="form-control" placeholder="Senha" required="" name="senha" />
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
                         <a href="#">
@@ -87,7 +87,7 @@
                         <p class="text-muted text-center">
                             <!--<small>Do not have an account?</small>-->
                         </p>
-                       <!-- <a class="btn btn-sm btn-white btn-block" href="registro.php">Create an account</a>-->
+                        <!-- <a class="btn btn-sm btn-white btn-block" href="registro.php">Create an account</a>-->
                     </form>
                     <p class="m-t">
                         <!--<small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small>-->
@@ -97,7 +97,7 @@
         </div>
         <hr />
         <div class="row">
-           <!-- <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 Copyright Example Company
             </div>-->
             <div class="col-md-6 text-right">
