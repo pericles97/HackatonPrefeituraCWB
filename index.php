@@ -2,7 +2,7 @@
 <?php
 	session_start();
 	require_once '_conexao.php';
-	$teste = $db -> query ("select el.nome from eleitor el where el.email = '$email'");
+	$teste = $db -> query ("select el.nome from eleitor el where el.email = '$email'")-> fetch();
 	foreach ($teste as $tt){
 		echo $tt['Nome'];
  echo $tt['Sobrenome'];
@@ -30,16 +30,16 @@
                     Portal de compartilhamento de conteudo on-line para aulas.
                 </small>
 				<h1><?php = $tt['Sobrenome']?><h1>
- <h1><?php = $tt['Endereco']?><h1>
- <h1><?php = $tt['Estado']?><h1>
- <h1><?php = $tt['Cidade']?><h1>
- <h1><?php = $tt['Telefone']?><h1>
- <h1><?php = $tt['Email']?><h1>
- <h1><?php = $tt['AreaAtuacao']?><h1>
- <h1><?php = $tt['Nivel']?><h1>
- <h1><?php = $tt['Senha']?><h1>
- <h1><?php = $tt['FaleUmPoucoSobreVoce']?><h1>
- <h1><?php =  "Teste conxcao"?><h1>
+				<h1><?php = $tt['Endereco']?><h1>
+				<h1><?php = $tt['Estado']?><h1>
+ 				<h1><?php = $tt['Cidade']?><h1>
+ 				<h1><?php = $tt['Telefone']?><h1>
+ 				<h1><?php = $tt['Email']?><h1>
+ 				<h1><?php = $tt['AreaAtuacao']?><h1>
+ 				<h1><?php = $tt['Nivel']?><h1>
+ 				<h1><?php = $tt['Senha']?><h1>
+ 				<h1><?php = $tt['FaleUmPoucoSobreVoce']?><h1>
+ 				<h1><?php =  "Teste conxcao"?><h1>
             </div>
 			<div class="text-center m-t-lg">
 				<img alt="image" class="img-circle" src="img/teach_hub_logo cortada.png" />
