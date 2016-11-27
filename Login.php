@@ -50,6 +50,11 @@
 
 
     <div class="loginColumns animated fadeInDown">
+
+        <div class="text-center m-t-lg">
+            <img alt="image" class="img-circle" src="img/teach_hub_logo cortada.png" />
+        </div>
+
         <div class="row">
 
             <div class="col-md-6">
