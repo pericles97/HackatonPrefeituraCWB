@@ -23,6 +23,7 @@ if(!empty($_POST)){
         $Numero = "";
         $Complemento = "";
         $Estado = "";
+        $Telefone = "";
         $Cidade = "";
         $Cidade = "";
         $Email = "";
