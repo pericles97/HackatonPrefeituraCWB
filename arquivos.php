@@ -120,7 +120,7 @@ $arquivos = $db -> query ("SELECT * FROM [dbo].[ARQUIVO] WHERE ID_Professor = $i
 
 					<div class="file-box">
 						<div class="file">
-							<a href="#">
+							<a href="<?=$arquivo['Caminho']?>">
 								<span class="corner"></span>
 
 								<div class="icon">
