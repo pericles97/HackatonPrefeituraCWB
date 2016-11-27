@@ -1,23 +1,4 @@
 <?php include('menu.php');?>
-<?php
-	session_start();
-	require_once '_conexao.php';
-	$teste = $db -> query ("select * from PROFESSOR")-> fetch();
-
-		echo $teste['Nome'];
- echo $teste['Sobrenome'];
- echo $teste['Endereco'];
- echo $teste['Estado'];
- echo $teste['Cidade'];
- echo $teste['Telefone'];
- echo $teste['Email'];
- echo $teste['AreaAtuacao'];
- echo $teste['Nivel'];
- echo $teste['Senha'];
- echo $teste['FaleUmPoucoSobreVoce'];
- echo "Teste conxcao";
-	
-?>
 
 <div class="wrapper wrapper-content animated fadeInRight">
 	<div class="row">
