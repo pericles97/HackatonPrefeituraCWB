@@ -25,6 +25,21 @@ if(isset($_FILES['fileUpload']))
 
 $arquivos = $db -> query ("SELECT * FROM [dbo].[ARQUIVO] WHERE ID_Professor = $idUsuario") -> fetchAll();
 
+$pastas = array();
+foreach ($arquivos as $arquivo)
+{
+	if (!in_array($arquivo['PastaProfessor'], $pastas))
+	{
+		array_push($pastas, $arquivo['PastaProfessor']);
+	}
+}
+
+if(!empty($_GET['pastaSelecionada']))
+{
+	$pastaSelecionada = $_GET['pastaSelecionada'];
+	$arquivos = $db -> query ("SELECT * FROM [dbo].[ARQUIVO] WHERE ID_Professor = $idUsuario AND PastaProfessor = '$pastaSelecionada'") -> fetchAll();
+}
+
 ?>
 
 <div class="wrapper wrapper-content">
@@ -51,61 +66,13 @@ $arquivos = $db -> query ("SELECT * FROM [dbo].[ARQUIVO] WHERE ID_Professor = $i
 						<div class="hr-line-dashed"></div>
 						<h5>pastas</h5>
 						<ul class="folder-list" style="padding: 0">
+							<?php foreach ($pastas as $pasta): ?>
 							<li>
-								<a href="">
-									<i class="fa fa-folder"></i>Biologia
+								<a href="arquivos.php?pastaSelecionada=<?=$pasta?>">
+									<i class="fa fa-folder"></i><?=$pasta?>
 								</a>
 							</li>
-							<li>
-								<a href="">
-									<i class="fa fa-folder"></i>Quimica
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<i class="fa fa-folder"></i>Fisica
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<i class="fa fa-folder"></i>Matematica
-								</a>
-								<a href="">
-									<i class="fa fa-folder"></i>Artes
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<i class="fa fa-folder"></i>Portugês
-								</a>
-							</li>
-						</ul>
-						<h5 class="tag-title">Tags</h5>
-						<ul class="tag-list" style="padding: 0">
-							<li>
-								<a href="">Ensino Médio</a>
-							</li>
-							<li>
-								<a href="">Trabalho</a>
-							</li>
-							<li>
-								<a href="">Casa</a>
-							</li>
-							<li>
-								<a href="">Jovens</a>
-							</li>
-							<li>
-								<a href="">Estudos</a>
-							</li>
-							<li>
-								<a href="">Aprender</a>
-							</li>
-							<li>
-								<a href="">Estudar</a>
-							</li>
-							<li>
-								<a href="">Conhecer</a>
-							</li>
+							<?php endforeach;?>
 						</ul>
 						<div class="clearfix"></div>
 					</div>
