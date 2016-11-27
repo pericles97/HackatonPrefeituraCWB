@@ -3,20 +3,20 @@
 	session_start();
 	require_once '_conexao.php';
 	$teste = $db -> query ("select * from PROFESSOR")-> fetch();
-	foreach ($teste as $tt){
-		echo $tt['Nome'];
- echo $tt['Sobrenome'];
- echo $tt['Endereco'];
- echo $tt['Estado'];
- echo $tt['Cidade'];
- echo $tt['Telefone'];
- echo $tt['Email'];
- echo $tt['AreaAtuacao'];
- echo $tt['Nivel'];
- echo $tt['Senha'];
- echo $tt['FaleUmPoucoSobreVoce'];
+
+		echo $teste['Nome'];
+ echo $teste['Sobrenome'];
+ echo $teste['Endereco'];
+ echo $teste['Estado'];
+ echo $teste['Cidade'];
+ echo $teste['Telefone'];
+ echo $teste['Email'];
+ echo $teste['AreaAtuacao'];
+ echo $teste['Nivel'];
+ echo $teste['Senha'];
+ echo $teste['FaleUmPoucoSobreVoce'];
  echo "Teste conxcao";
-	}
+	
 ?>
 
 <div class="wrapper wrapper-content animated fadeInRight">
