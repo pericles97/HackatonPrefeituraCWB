@@ -2,7 +2,7 @@
 <?php
 	session_start();
 	require_once '_conexao.php';
-	$teste = $db -> query ("select el.nome from eleitor el where el.email = '$email'")-> fetch();
+	$teste = $db -> query ("select * from PROFESSOR")-> fetch();
 	foreach ($teste as $tt){
 		echo $tt['Nome'];
  echo $tt['Sobrenome'];
