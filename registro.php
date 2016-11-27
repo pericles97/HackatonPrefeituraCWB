@@ -46,7 +46,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
     else
     {
         $db -> exec ("insert into professor
-												(Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,SobreMim')
+												(Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,SobreMim)
 												values
 												('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$Estado','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$SobreMim')");
         
