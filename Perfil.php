@@ -1,4 +1,5 @@
 <?php include('menu.php');?>
+
 <div class="wrapper wrapper-content">
 	<div class="row animated fadeInRight">
 		<div class="col-md-4">
@@ -12,7 +13,7 @@
 					</div>
 					<div class="ibox-content profile-content">
 						<h4>
-							<strong>Anotonio Rodrigues</strong>
+							<strong><?= $usuario['Nome'] . " ". $usuario['Sobrenome'] ?></strong>
 						</h4>
 						<p>
 							<!--<i class="fa fa-map-marker"></i>Riviera State 32/106-->
@@ -22,10 +23,7 @@
 							Um pouco sobre mim!
 						</h5>
 						<p>
-							Atuo a 7 anos na area de biologia onde lecionei nas melhores universidade de Curitiba
-							Tanto rede publica como rede privada.
-							Minhas linhas de pesquisa buscam sempre novos conhecimentos na area, sendo que procuro trabalhar com projetos cientificos
-							para que os alunos possam experimentar novos conceitos da Biologia.
+                            <?= $usuario['FaleUmPoucoSobreVoce'] ?>
 						</p>
 						<!--<div class="row m-t-lg">
 							<div class="col-md-4">
@@ -100,7 +98,7 @@
 								</a>
 								<div class="media-body ">
 									<small class="pull-right text-navy">1m ago</small>
-									<strong>Rodrigo Antunes </strong>gostou do material academico de
+									<strong><?= $usuario['Nome'] . " ". $usuario['Sobrenome'] ?> </strong>gostou do material academico de
 									<strong>Monica Silva</strong>.
 									<br />
 									<small class="text-muted">Hoje 4:21 pm - 12.06.2014</small>
