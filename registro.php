@@ -23,7 +23,7 @@ $FaleUmPoucoSobreVoce = null;
 ,<Nivel, varchar(20),>
 ,<Senha, varchar(20),>
 ,<FaleUmPoucoSobreVoce, varchar(255)
- * /
+ */
 
 ?>
 
@@ -68,11 +68,15 @@ $FaleUmPoucoSobreVoce = null;
                     <input type="text" class="form-control" placeholder="Endereço" required="" maxlength="50" id="txtEndereco">
                 </div>
                 <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Numero" required="">
+                    <input type="text" class="form-control" placeholder="Numero" required=""  maxlength="10" id= "txtNumero">
+                </div>
+
+                 <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Complemento" maxlength="30" id="txtComplemento">
                 </div>
 
                 <div class="form-group">
-                <select name="uf" input type="" class="form-control" required="">
+                <select name="uf" input type="" class="form-control" required="" id="txtEstado">
                         <option value = "AC" >AC</option>
                         <option value = "AL" >AL</option>
                         <option value = "AP" >AP</option>
@@ -103,16 +107,16 @@ $FaleUmPoucoSobreVoce = null;
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Cidade" required="">
+                    <input type="text" class="form-control" placeholder="Cidade" required="" id="txtCidade">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Telefone" required="">
+                    <input type="text" class="form-control" placeholder="Telefone" required="" id="txtTelefone">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" required="">
+                    <input type="email" class="form-control" placeholder="Email" required="" id="txtEmail">
                 </div>
                 <div class="form-group">
-                <select name="atuacao" input type="" class="form-control" required="">
+                <select name="atuacao" input type="" class="form-control" required="" id="txtAreaAtuação">
                     <option value="Atuação">Area de atuação</option>
                     <option value="portugues">Portugues</option>
                     <option value="biologia">Biologia</option>
@@ -122,7 +126,7 @@ $FaleUmPoucoSobreVoce = null;
                 </div>
                 </div>
                 <div class="form-group">
-                <select name="nivel" input type="" class="form-control" required="">
+                <select name="nivel" input type="" class="form-control" required="" id = "txtNivel">
                     <option value="nivel">Nível</option>
                     <option value="fundamental">Fundamental</option>
                     <option value="medio">Médio</option>
@@ -134,13 +138,13 @@ $FaleUmPoucoSobreVoce = null;
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Senha" required="">
+                    <input type="password" class="form-control" placeholder="Senha" required="" id="txtsenha">
                 </div>
                 <div>
-                    <textarea name='sobremim'  rows="4" cols="39" id='sobre' maxlength="255" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
+                    <textarea name='sobremim'  rows="4" cols="39" id='sobre' maxlength="255" id="txtSobreMim" placeholder="Fale um pouco sobre você. Maxmimo 255 Caracteres."></textarea>
                 </div>
                 <div class="form-group">
-                        <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Concordar com os termos e a política </label></div>
+                        <div class="checkbox i-checks"><label> <input required="" type="checkbox"><i></i> Concordar com os termos e a política </label></div>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>
 
