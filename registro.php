@@ -45,10 +45,9 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
     }
     else
     {
-        $db -> exec ("insert into professor
-												(Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,FaleUmPoucoSobreVoce)
-												values
-												('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$Estado','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$FaleUmPoucoSobreVoce')");
+        $db -> exec ("insert into professor (Nome,Sobrenome,Endereco,Numero,Complemento,Estado,Cidade,Telefone,Email,AreaAtuacao,Nivel,Senha,FaleUmPoucoSobreVoce)
+		values
+		('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$E','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$FaleUmPoucoSobreVoce')");
         
         header('location: login.php');
     }
