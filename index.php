@@ -35,19 +35,6 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-	<h1><?php= $tt['Sobrenome']?><h1>
-	<h1><?php= $tt['Endereco']?><h1>
-	<h1><?php= $tt['Estado']?><h1>
-	<h1><?php= $tt['Cidade']?><h1>
-	<h1><?php= $tt['Telefone']?><h1>
-	<h1><?php= $tt['Email']?><h1>
-	<h1><?php= $tt['AreaAtuacao']?><h1>
-	<h1><?php= $tt['Nivel']?><h1>
-	<h1><?php= $tt['Senha']?><h1>
-	<h1><?php= $tt['FaleUmPoucoSobreVoce']?><h1>
-	<h1><?php=  "Teste conxcao"?><h1>
-            
+</div>          
 
 <?php include('footer.php');?>
