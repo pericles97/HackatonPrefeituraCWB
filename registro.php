@@ -32,7 +32,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
 												values
 												('$Nome','$Sobrenome','$Endereco','$Numero','$Complemento','$Estado','$Cidade','$Telefone','$Email','$AreaAtuacao','$Nivel','$Senha','$SobreMim')");
         
-            header('location: login.php');
+        header('location: login.php');
     }
     
 }
@@ -145,7 +145,7 @@ if(!empty($Nome) && !empty($Sobrenome) && !empty($Endereco) && !empty($Numero) &
                     <option value="quimica">Quimica</option>
                 </select>
                 </div>
-                </div>
+               
                 <div class="form-group">
                 <select name="Nivel" input type="" class="form-control" required="">
                     <option value="nivel">Nível</option>
